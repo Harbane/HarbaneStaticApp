@@ -16,6 +16,7 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    margin: 0;
 }
 
 .Background{
@@ -34,7 +35,7 @@ li.Header, a{
     text-decoration: none;
 }
 header {
-    background-color: rgba(0, 0, 0, 0.454)
+    background-color: rgba(0, 0, 0, 0.454);
 }
 button{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -156,7 +157,7 @@ div.Container{
     background-color: rgba(0, 0, 0, 0.564);
     height: 100%;
     width: 20%;
-    margin: 0px 12px;
+    margin: 0px 8px;
     display: flex;
     align-items: center;
     justify-content: center;
