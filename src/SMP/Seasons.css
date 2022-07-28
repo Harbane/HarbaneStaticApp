@@ -17,7 +17,7 @@ body{
            text-decoration: none;
       }
       header {
-          background-color: rgba(114, 10, 10, 0.21);
+          background-color: rgba(15, 15, 15, 0.774);
 
       }
       button{
@@ -96,6 +96,7 @@ body{
 
 .container{
           display: inline-grid;
+          border-radius: 5px;
           height: 44vh;
           background-color: rgba(31, 143, 223, 0.6);
           margin: 0px 0px;;
@@ -104,18 +105,30 @@ body{
 
 .container:nth-child(1){
           background-color: rgba(254, 2, 2, 0.263);
+          background-image: linear-gradient(rgba(0, 0, 0, 0.168), rgba(0, 0, 0, 0.768)) , url(Images/Harbane1Base.jpg);
+          background-size: cover;
+          background-position: center;
           animation: fadeIn 0.5s ease-in;
           animation-delay: 0s;
 }
 .container:nth-child(2){
           background-color: rgba(254, 199, 2, 0.414);
+          background-image: linear-gradient(rgba(0, 0, 0, 0.168), rgba(0, 0, 0, 0.768)) , url(Images/Harbane2Basejpg.jpg);
+          background-size: cover;
+          background-position: center;
           animation: fadeIn 1s ease-in;
 }
 .container:nth-child(3){
           background-color: rgba(30, 255, 0, 0.438);
+          background-image: linear-gradient(rgba(0, 0, 0, 0.168), rgba(0, 0, 0, 0.768)) , url(Images/WideAnlgeViewOfSMP.jpg);
+          background-size: cover;
+          background-position: center;
           animation: fadeIn 1.5s ease-in;
 }
 .container:nth-child(4){
+          background-image: linear-gradient(rgba(0, 0, 0, 0.168), rgba(0, 0, 0, 0.768)) , url(Images/WatchTower.jpg);
+          background-size: cover;
+          background-position: center;
           background-color: rgba(2, 233, 254, 0.458);
           animation: fadeIn 1.75s ease-in;
 }
@@ -132,4 +145,12 @@ body{
   to {
     opacity: 1;
   }
+}
+
+.allign{
+          height: 100%;
+          display: inline-grid;
+          align-items: center;
+          justify-content: center;
+          margin: 0px 100px;
 }
