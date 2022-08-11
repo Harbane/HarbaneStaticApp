@@ -1,56 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
 * {
     box-sizing: border-box;
-  }
-
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
 html{
-    font-family: sans-serif;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-  
-    background-color:rgb(0, 0, 0);
+    height: 100%;
+    width: 100%;
 }
 
 body{
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgb(1, 1, 1);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-
-  }
-  
-  
-  
-  
- 
-  /*---------------------------------------------------------------*/
-  section {
-    height: 90vh;
-
-
-    scroll-snap-align: start;
-    text-align: center;
-    position: relative;
-    
-  }
-  
-  section:nth-child(1) {
-
-
-    background-color: rgb(0, 0, 0);
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("Images/HarbaneSMP.jpg");
-
+.Background{
+    background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0, 0, 0, 0.24) 40%, rgba(0, 0, 0, 0) 100%), url("Images/StaryNight.jpg");
+    background-attachment: local;
+    background-position: center;
     background-size: cover;
+    background-repeat: none;
+}
 
-    animation-duration: 20s;
+li.Header, a{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+header {
+    background-color: rgba(0, 0, 0, 0.454);
+}
+button{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(249, 236, 236);
+    text-decoration: none;
+    
+}
+p{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+    font-size: 16px;
+    color: rgb(249, 236, 236);
+    text-decoration: none;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 3vh 7%;
+  padding-bottom: 2vh;
+  position: sticky;
+}
+.logo {
+    cursor: pointer;
 
-    animation-name: first;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
+    width: 3vw;}
+.nav__links{
+    list-style: none;}
+.nav__links li.Header {
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav__links li.Header, a {
+    transition: all 0.3 ease 0s;}
+.nav__links li.Header a:hover{
+    color: #0088a9;
+    transition: all 0.6s ease 0s;}
+.cta{
+    margin-right: 0px;
+    padding-right: 0px;}
 
-  @keyframes first{
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgba(0, 136, 169, 0.8);}
+
+/*----------------------------*/
+
+.HomeIntro{
+    height: 90.9vh;
+    background-color: rgba(248, 4, 4, 0);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.MarginContainer{
+    height: 10vh;
+    margin-top: 40%;
+    margin-bottom: 40%;
+    margin-left: 0vh;
+    margin-right: 0vh; 
+} 
+     
+h1{
+    font-size: 11vh;
+    width: 100%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+
+    animation-name: H1;
+    animation-duration: 2s;
+}
+
+h4{
+    text-align: center;
+    font-family: Roboto Mono, monospace;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    width: 100%;
+    animation-name: slogan;
+    animation-duration: 2s;
+}
+
+section.Slide2{
+    height: 90.9vh;
+    padding: 0 40px;
+    background-color: rgb(0, 0, 0);
+}
+
+div.ContainerSection{
+    padding-top: 1vh;
+    color: white;
+    background-color: rgba(215, 12, 12, 0);
+    height: 450px;
+    
+}
+
+div.Container{
+    height: 100%;
+    width: 100%;
+    margin-bottom: 100px;
+    background-color: rgba(12, 127, 215, 0);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Placeholder{
+    background-color: rgba(0, 0, 0, 0.564);
+    height: 100%;
+    width: 20%;
+    margin: 0px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: 350%;
+    background-repeat: no-repeat;
+    transition: background-size 0.6s ease-in-out;
+} 
+
+.Placeholder:hover{
+    background-size: 400%;    
+}
+
+.Padding{
+    text-align: center;
+    height: 100%;
+    padding: 42% 30px;
+}
+
+.Title{
+    font-family: 'Titan One', cursive;
+    font-weight: 100;
+    font-size: 45px;
+    font-style: italic;
+    color:seashell;
+}
+
+.Text{
+    font-family: 'Roboto Mono', monospace;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.Placeholder:nth-child(1){
+    background-image: linear-gradient(rgba(0, 0, 0, 0.125), rgba(0, 0, 0, 0.125)), url("Images/Bases.jpg");
+    border-radius: 3vh 0.5vh 0.5vh 3vh;
+}
+.Placeholder:nth-child(2){
+    background-image: radial-gradient(circle, rgba(63,94,251,0) 0%, rgba(0, 0, 0, 0) 30%, rgb(0, 0, 0, 0.804) 50%), url("Images/Harbane1Base.jpg");
+    border-radius: 0.5vh 0.5vh 0.5vh 0.5vh;
+}
+.Placeholder:nth-child(3){
+    background-image: radial-gradient(circle, rgba(63,94,251,0) 0%, rgba(0, 0, 0, 0) 30%, rgb(0, 0, 0, 0.804) 50%), url("Images/StaryForest.jpg");
+    border-radius: 0.5vh 0.5vh 0.5vh 0.5vh;
+}
+.Placeholder:nth-child(4){
+    background-image: radial-gradient(circle, rgba(63,94,251,0) 0%, rgba(0, 0, 0, 0.137) 30%, rgb(0, 0, 0, 0.804) 50%), url("Images/CloudyNight.jpg");
+    border-radius: 0.5vh 3vh 3vh 0.5vh;
+}
+
+.Slide2Section2{
+    position: relative;
+
+}
+/*-------------FOOTER----------------------*/
+#footer{
+    background-color: rgb(12, 12, 12);
+    height: 20vh;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 6.2vh 5%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -100px;
+    clear: both;
+    bottom: 0px;
+}
+
+.ContentCentered{
+    display: inline-grid;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.Message{
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.516);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.LogoContainer{
+    display: inline-flex;
+    align-items: center;
+}
+
+.LogoTitle{
+    margin-left: 20px;
+    font-size: 50px;
+}
+
+.Foot{
+    background-color: rgb(12, 12, 12);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img.Logo{
+    border-radius: 8px;
+    width: 2.5em;
+}
+
+.Copyright{
+    font-weight: 400;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.74);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-left: 20px;
+}
+
+.FootLinks{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Links{
+    font-size: 17px;
+    font-style: normal;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.804);
+    margin: 0px 20px;
+    transition: color 0.15s ease-in-out;
+}
+
+.Links:hover{
+    color: rgba(255, 255, 255, 0.475);
+}
+
+.Links:last-child{
+    margin-right: 50px;
+}
+
+.Affiliation{
+    font-family: monospace;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+
+
+
+@keyframes first{
     from {
         background-position: left;
     }
@@ -61,104 +326,211 @@ html, body {
   
       }
   }
-  
 
-  section:nth-child(2) {
-    background-color: rgb(0, 0, 0);
-    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("Images/MistyBlueGradient.jpg");
-    background-size: cover;
-    background-repeat: none;
-  }
-  section:nth-child(3) {
-
-
-    background-color: rgb(0, 0, 0)
-
-  }
-
-  h1 {
-      color: white;
-      font-size: 12vw;
-      padding-top: 8vw;
-      margin: 0 0;
-      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-      animation-name: H1;
-      animation-duration: 2s
-  }
-
-  h1.section2{
-    font-size: 7vw;
-    padding-top: 10vw;
-  }
-
-
-  button {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-    font-size: 3vh;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-
-    background-color: rgb(0, 120, 206);
-    padding: 10px 18px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.374);
-
-    
-    animation-duration: 0.6s;
-    
-    animation-name: button;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-
-
-  }
-
-p  {
-  color: rgb(255, 255, 255);
-  font-size: 2vh;
-}
-
-
-
-  @keyframes H1{
-      from {
-          opacity: 0;
-          padding-top: 5vw;
-      }
-
-      to {
-          opacity: 1;
-        }
-  }
-
-  @keyframes button{
+@keyframes H1{
     from {
-        margin-top: 0vw;
+        opacity: 0;
     }
 
     to {
-        margin-top: 0.8vw;
-        box-shadow: 0px 6px 10px 4px rgba(0, 0, 0, 0.374);
+        opacity: 1;
+      }}
 
+@keyframes slogan{
+    from {
+        padding-top: 50px;
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
       }
 }
+    
 
+/* Responsive design */
+@media screen and (max-width: 1000px){
+
+
+    Header{
+        padding-right: 40px;
+        padding-left: 40px;
+    }}
+
+@media screen and (max-width: 770px){
+    header{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
+
+@media screen and (max-width: 1690px){
+    div.ContainerSection{
+        height: 375px;
+        padding: 0;
+    }
+    div.Placeholder{
+        width: 20%;
+    }
+    h2.Title{
+        font-size: 30px;
+    }
+    p.Text{
+        font: 10px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    div.ContainerSection{
+        color: white;
+        background-color: rgba(215, 12, 12, 0);
+        height: 450px;
+        
+    }
+    
+    div.Container{
+        height: 100%;
+        width: 100%;
+        background-color: rgba(12, 127, 215, 0);
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    div.Placeholder{
+        width: 100%;
+    }
+    h2.Title{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    li.Header, a{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 500;
+        font-size: 1.3VH;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+    header {
+        background-color: rgba(0, 0, 0, 0.454);
+    }
+    button{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        color: rgb(249, 236, 236);
+        text-decoration: none;
+        
+    }
+    p{
+        font-family: 'Roboto Mono', monospace;
+        font-weight: 600;
+        font-size: 16px;
+        color: rgb(249, 236, 236);
+        text-decoration: none;
+    }
+    header{
+      display: flex;
+      justify-content: space-between;
+      padding: 3vh 5%;
+      padding-bottom: 2vh;
+      position: sticky;
+    }
+    .logo {
+        cursor: pointer;
+    
+        width: 10vw;
+    }
+    .nav__links{
+        list-style: none;}
+    .nav__links li.Header {
+        display: inline-block;
+        padding: 0px 10px;
+    }
+    .nav__links li.Header, a {
+        transition: all 0.3 ease 0s;}
+    .nav__links li.Header a:hover{
+        color: #0088a9;
+        transition: all 0.6s ease 0s;}
+    .cta{
+        margin-right: 0px;
+        padding-right: 0px;}
+    
+    button {
+        padding: 4px 8px;
+        background-color: rgba(0, 136, 169, 1);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: rgba(0, 136, 169, 0.8);}
+
+    h1{
+        text-align: center;
+        font-size: 9vh;
+    }
+    div.ContainerSection{
+        color: white;
+        background-color: rgba(215, 12, 12, 0);
+        height: 450px;
+        
+    }
+    
+    div.Container{
+        height: 100%;
+        width: 100%;
+        background-color: rgba(12, 127, 215, 0);
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .Placeholder{
+        background-color: rgba(0, 0, 0, 0.564);
+        height: 90%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-position: center;
+        background-size: 350%;
+        background-repeat: no-repeat;
+        transition: background-size 0.6s ease-in-out;
+
+    } 
+
+    .Placeholder:nth-child(1){
+        border-radius: 1.2vh 1.2vh 1.2vh 1.2vh;
+    }
+    .Placeholder:nth-child(2){
+        border-radius: 1.2vh 1.2vh 1.2vh 1.2vh;
+    }
+    .Placeholder:nth-child(3){
+        border-radius: 1.2vh 1.2vh 1.2vh 1.2vh;
+    }
+    .Placeholder:nth-child(4){
+        border-radius: 1.2vh 1.2vh 1.2vh 1.2vh;
+    }
+
+    .Padding{
+        text-align: center;
+        height: 100%;
+        padding: 30% 30px;
+    }
+    #footer{
+        display: none;
+    }
+}
 ::-webkit-scrollbar{
-  width: 10px;
-}
-
+    width: 10px;}
 ::-webkit-scrollbar-track{
-  background-color:rgb(46, 46, 46);
-
-}
+    background-color:rgb(46, 46, 46);}
 ::-webkit-scrollbar-thumb{
-  background-color:#0088a9;
-  border-radius:16px
-}
+    background-color:#0088a9;
+    border-radius:16px}
 ::-webkit-scrollbar-thumb:hover{
-  background-color:rgb(0, 174, 217);
-}
+    background-color:rgb(0, 174, 217);}
