@@ -140,8 +140,7 @@ button:hover {
 .link__card{
   width: 45%;
   height: 225px;
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
   background-color:rgb(239, 235, 235);
   border-radius: 2.8vh;
@@ -152,10 +151,47 @@ button:hover {
 .link__card:hover{
   background-color: rgb(240, 230, 230);
   box-shadow: 22px 22px 22px #00000027;
+  cursor: pointer;
+}
+
+.div__card__content{
+  width: 100%;
+  height: 100%;
+}
+
+.link{
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .inv{
-  color: rgb(0,0,0)
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 5.5vh;
+  color: rgb(0,0,0);
+  text-align: right;
+  padding-right: 0px;
+  width: 100%;
+  margin-left: 12vh;
+}
+
+.icon{
+  position: relative;
+  background-color: rgba(0, 255, 255, 0.47);
+}
+
+div.i2{
+  border-radius: 20px;
+}
+
+.DsIcon{
+  width: 12vh;
+  margin-left: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
 }
 /*---------------------------------------------------------------*/
 
