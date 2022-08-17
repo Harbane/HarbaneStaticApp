@@ -151,7 +151,12 @@ button:hover {
 
 .link__card:hover{
   background-color: rgb(240, 230, 230);
-  box-shadow: 22px 22px 22px #00000027;}
+  box-shadow: 22px 22px 22px #00000027;
+}
+
+.inv{
+  color: rgb(0,0,0)
+}
 /*---------------------------------------------------------------*/
 
 #footer{
