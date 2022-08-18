@@ -195,15 +195,15 @@ div.Container{
 
 .Placeholder:nth-child(1){
     background-image: linear-gradient(rgba(0, 0, 0, 0.125), rgba(0, 0, 0, 0.125)), url("Images/Bases.jpg");
-    border-radius: 3vh 0.5vh 0.5vh 3vh;
+    border-radius: 3vh 0vh 0vh 3vh;
 }
 .Placeholder:nth-child(2){
     background-image: radial-gradient(circle, rgba(63,94,251,0) 0%, rgba(0, 0, 0, 0) 30%, rgb(0, 0, 0, 0.804) 50%), url("Images/Harbane1Base.jpg");
-    border-radius: 0.5vh 0.5vh 0.5vh 0.5vh;
+    border-radius: 0vh 0vh 0vh 0vh;
 }
 .Placeholder:nth-child(3){
     background-image: radial-gradient(circle, rgba(63,94,251,0) 0%, rgba(0, 0, 0, 0) 30%, rgb(0, 0, 0, 0.804) 50%), url("Images/StaryForest.jpg");
-    border-radius: 0.5vh 0.5vh 0.5vh 0.5vh;
+    border-radius: 0vh 0vh 0vh 0vh;
 }
 .Placeholder:nth-child(4){
     background-image: radial-gradient(circle, rgba(63,94,251,0) 0%, rgba(0, 0, 0, 0.137) 30%, rgb(0, 0, 0, 0.804) 50%), url("Images/CloudyNight.jpg");
