@@ -1,2 +1,0 @@
-
-GET http://api.quran.com/api/v3/chapters/30/verses?recitation=1&translations=21&language=en&text_type=words

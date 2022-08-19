@@ -45,6 +45,16 @@ div.LoginBox{
     box-shadow: 0 0px 20px 5px rgba(0, 0, 0, 0.463);
 }
 
+.ReturnButton{
+    filter: invert(100%) sepia(0%) saturate(1555%) hue-rotate(161deg) brightness(100%) contrast(101%);
+    color: #d0d0d0;
+    width: 60px;
+    margin-left: 0px;
+    position: absolute;
+    margin: 2% 0% 0% 2%;
+}
+
+
 h1{
     font-family: 'Roboto Mono', monospace;
     font-size: 1.81em;
