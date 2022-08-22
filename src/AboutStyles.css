@@ -218,8 +218,10 @@ h1.section3{
   background-color:rgb(0, 174, 217);
 }
 
+
+
 ::selection{
-  background: rgb(217, 119, 0);
+  background: rgb(0, 225, 255);
 }
 
 

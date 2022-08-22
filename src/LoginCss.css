@@ -146,6 +146,9 @@ img.usercon{
     50% {
         width: 5%;
     }
+    75% {
+        width: 5%;
+    }
     to {
         transform: rotate(360deg);
         width: 5%;
@@ -181,5 +184,5 @@ img.usercon{
 }
 
 ::selection{
-    background: rgb(217, 119, 0);
+    background: rgb(0, 225, 255);
   }

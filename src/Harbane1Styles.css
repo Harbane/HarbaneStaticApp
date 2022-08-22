@@ -236,6 +236,8 @@ li.Footer{
   padding: 0px 20px;
 }
 
+
+
 ::selection{
-  background: rgb(217, 119, 0);
+  background: rgb(0, 225, 255);
 }
