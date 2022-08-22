@@ -360,3 +360,7 @@ li.Footer{
   display: inline-block;
   padding: 0px 20px;
 }
+
+::selection{
+  background: rgb(217, 119, 0);
+}

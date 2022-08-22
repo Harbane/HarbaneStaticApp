@@ -425,3 +425,6 @@ img.Logo{
 ::-webkit-scrollbar-thumb:hover{
   background-color:rgb(0, 174, 217);}
 
+  ::selection{
+    background: rgb(217, 119, 0);
+  }

@@ -304,3 +304,19 @@ img.Logo{
 
 
 /*FOOTER END*/
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-track{
+  background-color:rgb(46, 46, 46);
+
+}
+::-webkit-scrollbar-thumb{
+  background-color:#0088a9;
+  border-radius:16px
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color:rgb(0, 174, 217);
+}
