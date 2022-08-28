@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;0,800;1,300;1,400&display=swap');
 
 html, body {
   height: 100%;
@@ -7,7 +9,7 @@ html, body {
 
 
 
-* {
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -26,7 +28,6 @@ li.Header, a{
   text-decoration: none;
 }
 
-
 button, p{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 500;
@@ -41,7 +42,7 @@ header{
   justify-content: space-between;
   padding: 3vh 7%;
   padding-bottom: 2vh;
-  background-color: rgba(1, 1, 1, 0.066);
+  background-color: rgba(0, 0, 0, 0.046);
 }
 
 .logo {
@@ -66,7 +67,7 @@ header{
   transition: all 0.3 ease 0s;
 }
 
-.nav__links li.Header a:hover{ 
+.nav__links li.Header a:hover{
   color: #0088a9;
   transition: all 0.4s ease 0s;
 }
@@ -89,154 +90,127 @@ button:hover {
   background-color: rgba(0, 136, 169, 0.8);
 }
 
+/*-----------------------------*/
+  .Hero{
+    background-image: url('Images/Ragen_Allay.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 450px;
+    background-color: rgb(32, 32, 32);
+    display: block;
+    align-items: center;
 
-h1.Home{     
-
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-
-
-
-  /*text-align: center;
-  margin: 0;
-  position: absolute;               
-  top: 50%;                         
-  transform: translate(0, -50%);*/
-
-
-  color: rgb(255, 255, 255);
-  font-size: 200px;
-
-  background-color: yellow;
+  }
+  .Hero__text{
+    color: rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    text-align: center;
   
+  }
+
+  .Hero__title{
+    font-size: 70px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .Hero__subtitle{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+  }
+
+
+  .socials{
+    height: 900px;
+    display: block;
+    justify-content: center;
+  }
+
+  .box{
+    width: 100%;
+    height: 40%;
+    background-color: #ffffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box:nth-child(1){
+    margin-top: 7%;
+  }
+
+
+.link__card{
+  width: 45%;
+  height: 225px;
+  display: inline-flex;
+  align-items: center;
+  background-color:rgb(239, 235, 235);
+  border-radius: 2.8vh;
+  box-shadow: 10px 10px 12px #00000027;
+  transition: all 0.3s ease 0s;
 }
 
-body{
-  background-color: rgb(1, 1, 1);
-  background-image: url("Images/Wheat.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-
+.link__card:hover{
+  background-color: rgb(240, 230, 230);
+  box-shadow: 22px 22px 22px #00000027;
+  cursor: pointer;
 }
 
+.div__card__content{
+  width: 100%;
+  height: 100%;
+}
+
+.link{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.inv{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 5.5vh;
+  color: rgb(0,0,0);
+  text-align: right;
+  padding-right: 0px;
+  width: 100%;
+  margin-left: 12vh;
+}
+
+.icon{
+  position: relative;
+  background-color: rgba(0, 255, 255, 0.47);
+}
+
+div.i2{
+  border-radius: 20px;
+}
+
+.DsIcon{
+  width: 12vh;
+  margin-left: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
 /*---------------------------------------------------------------*/
-section {
-  height: 92vh;
-}
 
-section:nth-child(2) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-section:nth-child(3) {
-  height: 104vh;
-
-  background-color: black;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  padding: 0 20vh;
-
-
-}
-section:nth-child(4) {
-  height: 100vh;
-
-  background-image: linear-gradient(rgba(28, 2, 2, 0.2), rgba(0,0,0,0.2)), url("Images/RayyanBase.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  display: flex;
-  justify-content: center;
-}
-
-/*------------------------------------------------------------------*/
-
-h1.section1{
-
-
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 500;
-  font-size: 10vh;
-  color: rgb(0, 0, 0);
-  margin-left: 3vh;
-
-}
-
-
-
-h1.section2{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 400;
-  font-size: 10vh;
-  color:rgb(255, 255, 255);
-  text-decoration:underline;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 4vh;
-
-}
-
-h1.section3{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-size: 10vh;
-  color:rgb(255, 255, 255);
-
-  display: flex;
-  align-items: center;
-}
-
-.timeline{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-;
-  font-weight: 300;
-  font-size: 4vh;
-  color:rgb(255, 255, 255);
-  list-style-type: square;
-  padding-top: 10vh;
-}
-::-webkit-scrollbar{
-  width: 10px;
-}
-
-::-webkit-scrollbar-track{
-  background-color:rgb(46, 46, 46);
-
-}
-::-webkit-scrollbar-thumb{
-  background-color:#0088a9;
-  border-radius:16px
-}
-::-webkit-scrollbar-thumb:hover{
-  background-color:rgb(0, 174, 217);
-}
-
-
-
-::selection{
-  background: rgb(0, 225, 255);
-}
-
-
-/*-------------FOOTER----------------------*/
 #footer{
   background-color: rgb(12, 12, 12);
   height: 20vh;
   position: relative;
-  bottom: 0;
   width: 100%;
   padding: 6.2vh 5%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: -100px;
+  margin-top: 0px;
   clear: both;
   bottom: 0px;
 }
@@ -323,10 +297,6 @@ img.Logo{
   font-weight: 500;
 }
 
-
-/*FOOTER END*/
-
-
 /* Responsive design */
 @media screen and (max-width: 1000px){
 
@@ -343,46 +313,6 @@ img.Logo{
   }
 }
 
-@media screen and (max-width: 1690px){
-  div.ContainerSection{
-      height: 375px;
-      padding: 0;
-  }
-  div.Placeholder{
-      width: 20%;
-  }
-  h2.Title{
-      font-size: 30px;
-  }
-  p.Text{
-      font: 10px;
-  }
-}
-
-@media screen and (max-width: 600px){
-  div.ContainerSection{
-      color: white;
-      background-color: rgba(215, 12, 12, 0);
-      height: 450px;
-      
-  }
-  
-  div.Container{
-      height: 100%;
-      width: 100%;
-      background-color: rgba(12, 127, 215, 0);
-      display: grid;
-      align-items: center;
-      justify-content: center;
-  }
-  div.Placeholder{
-      width: 100%;
-  }
-  h2.Title{
-      font-size: 40px;
-  }
-}
-
 @media screen and (max-width: 450px){
   li.Header, a{
       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -392,7 +322,7 @@ img.Logo{
       text-decoration: none;
   }
   header {
-      background-color: rgba(0, 0, 0, 0.454);
+      background-color: rgb(0, 0, 0);
   }
   button{
       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -450,55 +380,60 @@ img.Logo{
       text-align: center;
       font-size: 9vh;
   }
-  div.ContainerSection{
-      color: white;
-      background-color: rgba(215, 12, 12, 0);
-      height: 450px;
-      
-  }
   
-  div.Container{
-      height: 100%;
-      width: 100%;
-      background-color: rgba(12, 127, 215, 0);
-      display: grid;
-      align-items: center;
-      justify-content: center;
-  }
-  
-  .Placeholder{
-      background-color: rgba(0, 0, 0, 0.564);
-      height: 90%;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-position: center;
-      background-size: 350%;
-      background-repeat: no-repeat;
-      transition: background-size 0.6s ease-in-out;
-
-  } 
-
-  .Placeholder:nth-child(1){
-      border-radius: 1.2vh 1.2vh 1.2vh 1.2vh;
-  }
-  .Placeholder:nth-child(2){
-      border-radius: 1.2vh 1.2vh 1.2vh 1.2vh;
-  }
-  .Placeholder:nth-child(3){
-      border-radius: 1.2vh 1.2vh 1.2vh 1.2vh;
-  }
-  .Placeholder:nth-child(4){
-      border-radius: 1.2vh 1.2vh 1.2vh 1.2vh;
-  }
 
   .Padding{
       text-align: center;
       height: 100%;
       padding: 30% 30px;
   }
+  .link__card{
+    width: 95%;
+    height: 150px;
+  }
+  .box{
+    width: 100%;
+    height: 22%;
+    background-color: #ffffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box:nth-child(1){
+    margin-top: 10%;
+  }
+
+  .DsIcon{
+    margin-top: 0px;
+    margin-left: 40px;
+    width: 6vh;
+  }
+
+  .inv{
+    font-size: 3vh;
+    margin-left: 7vh;
+  }
+
   #footer{
       display: none;
   }
 }
+::-webkit-scrollbar{
+  width: 10px;}
+::-webkit-scrollbar-track{
+  background-color:rgb(46, 46, 46);}
+::-webkit-scrollbar-thumb{
+  background-color:#0088a9;
+  border-radius:16px}
+::-webkit-scrollbar-thumb:hover{
+  background-color:rgb(0, 174, 217);}
+
+
+
+
+
+
+  ::selection{
+    background: rgb(0, 225, 255);
+  }
