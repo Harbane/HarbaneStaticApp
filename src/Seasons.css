@@ -121,56 +121,62 @@ section{
           background-color: rgba(31, 143, 223, 0.6);
           margin: 0px 15px;;
           width: 20%;
+          
 }
 
 .container:nth-child(1){
           background-color: rgb(0, 0, 0);
-          background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) , url(Images/Harbane1\(black\).jpg);
+          background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)) , url('Images/Harbane1Base.jpg');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
           animation: fadeIn 0.5s ease-in;
           animation-delay: 0s;
+          transition: all 0.1s ease-in;
+          background-size: 300%;
 }
 .container:nth-child(1):hover{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) , url('Images/Harbane1Base.jpg');
-  background-size: 300%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)) , url('Images/Harbane1Base.jpg');
+  background-size: 400%;
 }
 .container:nth-child(2){
           background-color: rgb(0, 0, 0);
-          background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) , url(Images/Harbane2Base\(Black\).jpg);
+          background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)) , url('Images/Harbane2Basejpg.jpg');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
           animation: fadeIn 1s ease-in;
+          transition: all 0.1s ease-in;
+          background-size: 300%;
 }
 .container:nth-child(2):hover{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) , url('Images/Harbane2Basejpg.jpg');
-  background-size: 300%;
+  background-size: 400%;
 }
 .container:nth-child(3){
           background-color: rgb(0, 0, 0);
-          background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) , url(Images/TamjidHideyHole\ \(Black\).jpg);
+          background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)) , url(Images/TamjidHideyHole.jpg);
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
           animation: fadeIn 1.5s ease-in;
+          transition: all 0.1s ease-in;
+          background-size: 300%;
 }
 .container:nth-child(3):hover{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) , url(Images/TamjidHideyHole.jpg);
-  background-size: 300%;
+  background-size: 400%;
 }
 .container:nth-child(4){
-          background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) , url('Images/Harbane4Base\ \(Black\).jpg');
+          background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)) , url('Images/Harbane4Base.jpg');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
           background-color: rgb(0, 0, 0);
           animation: fadeIn 1.75s ease-in;
+          background-size: 300%;
+          transition: all 0.1s ease-in;
 }
 .container:nth-child(4):hover{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) , url('Images/Harbane4Base.jpg');
-  background-size: 300%;
+  background-size: 400%;
 }
 
 

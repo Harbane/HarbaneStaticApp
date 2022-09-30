@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap');
 
 html{
     height: 100%;
@@ -144,10 +145,11 @@ p{
 
 .content{
     width: 100%;
-    height: 130vh;
+    height: 100%;
     display: flex;
     justify-content:center;
     align-items: center;
+    margin: 2% 0% 2% 0%;
 }
 
 .rules{
@@ -157,18 +159,26 @@ p{
     background-color: rgb(8, 8, 8);
     display: flex;
     flex-direction: column;
-    padding: 2% 3%
+    padding: 2% 3%;
+    padding-right: 0.5%
+}
+
+.Section{
+    color: white;
+    font-family: Roboto Mono, monospace;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.Section:nth-first-child{
+    margin-top: 0;
 }
 
 .list{
     color: white;
-}
-
-.heading{
-    background-color:rgba(0, 0, 0, 0);
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Open Sans', sans-serif;
     font-size: 15px;
-    color: white;
+    margin-top: 5px;
 }
 
 /*-------------FOOTER----------------------*/

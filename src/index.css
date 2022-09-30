@@ -20,6 +20,21 @@ body{
     margin: 0;
 }
 
+
+.hidden {
+    opacity: 0;
+    /* filter: blur(5px);
+    transform: translateX(-100%);*/
+    transition: all 1s
+}
+
+.show{
+    opacity: 1;
+    /* filter: blur(1);
+    transform: translateX(0); */
+}
+
+
 .Background{
     background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0, 0, 0, 0.24) 40%, rgba(0, 0, 0, 0) 100%), url("Images/StaryNight.jpg");
     background-attachment: local;
@@ -131,23 +146,19 @@ h4{
 }
 
 section.Slide2{
-    height: 90.9vh;
-    padding: 0 40px;
+    height: 100%;
     background-color: rgb(0, 0, 0);
 }
 
-div.ContainerSection{
+
+div.Container{
     padding-top: 1vh;
     color: white;
     background-color: rgba(215, 12, 12, 0);
     height: 450px;
-    
-}
-
-div.Container{
     height: 100%;
     width: 100%;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
     background-color: rgba(12, 127, 215, 0);
     display: inline-flex;
     align-items: center;
@@ -181,7 +192,7 @@ div.Container{
 .Title{
     font-family: 'Titan One', cursive;
     font-weight: 100;
-    font-size: 45px;
+    font-size: 40px;
     font-style: italic;
     color:seashell;
 }
@@ -190,7 +201,7 @@ div.Container{
     font-family: 'Roboto Mono', monospace;
     font-style: italic;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .Placeholder:nth-child(1){
@@ -198,16 +209,16 @@ div.Container{
     border-radius: 3vh 0vh 0vh 3vh;
 }
 .Placeholder:nth-child(2){
-    background-image: radial-gradient(circle, rgba(63,94,251,0) 0%, rgba(0, 0, 0, 0) 30%, rgb(0, 0, 0, 0.804) 50%), url("Images/Harbane1Base.jpg");
+    background-image: url("Images/Harbane1Base.jpg");
     border-radius: 0vh 0vh 0vh 0vh;
 }
 .Placeholder:nth-child(3){
-    background-image: radial-gradient(circle, rgba(63,94,251,0) 0%, rgba(0, 0, 0, 0) 30%, rgb(0, 0, 0, 0.804) 50%), url("Images/StaryForest.jpg");
+    background-image: url("Images/StaryForest.jpg");
     border-radius: 0vh 0vh 0vh 0vh;
 }
 .Placeholder:nth-child(4){
-    background-image: radial-gradient(circle, rgba(63,94,251,0) 0%, rgba(0, 0, 0, 0.137) 30%, rgb(0, 0, 0, 0.804) 50%), url("Images/CloudyNight.jpg");
-    border-radius: 0.5vh 3vh 3vh 0.5vh;
+    background-image:  url("Images/CloudyNight.jpg");
+    border-radius: 0vh 3vh 3vh 0vh;
 }
 
 .Slide2Section2{

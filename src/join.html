@@ -50,7 +50,8 @@
             </div>
        </div> 
        <div class="box">
-          <div class="link__card">
+          <p id="p1">play.harbane.net</p>
+          <button class='link__card' onclick="copyToClipboard('#p1')">
                 <div class="link__card__content">
                     <div class="icon_i2">
                         <img class='DsIcon' src="Images/server-icon.png" alt="Discord Logo">
@@ -59,10 +60,19 @@
                         <h3 class="inv">Ip: play.harbane.net</h3>
                     </div>
                 </div>
-             </div>
+            </button>
         </div>
     </div>
-
+</div>
+    <script>
+        function copyToClipboard(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+          }              
+      </script>
     <footer class="PrimaryFooter" id="footer">
         <div class="ContentCentered">
             <p class="Message">

@@ -190,6 +190,9 @@ div.i2{
   border-radius: 20px;
 }
 
+#p1{
+  display: none;
+}
 .DsIcon{
   width: 12vh;
   margin-left: 7vh;
