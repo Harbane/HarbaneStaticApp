@@ -155,7 +155,7 @@ img.usercon{
       }
 }
 
-@media screen and (max-width: 520px){
+@media screen and (max-width: 620px){
     body{
         margin: 0;   
         padding: 0;
@@ -168,10 +168,11 @@ img.usercon{
         height: 100%;
     }
     div.container{
-        background-color: #17191b57;
+        background-color: rgba(29, 32, 35, 0.68);
     }
 
     div.LoginBox{
+        background: #21252900;
         box-shadow: 0 0px 20px 5px rgba(0, 0, 0, 0);
     }
 
