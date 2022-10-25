@@ -81,7 +81,41 @@ button {
 }
 button:hover {
  background-color: rgba(0, 136, 169, 0.8);}
-      
+
+ .dropdown {
+  display: inline-block;
+  position: relative;
+  
+}
+.dropdown-content {
+  background-color:rgba(255, 255, 255, 0.9);
+  display: none;
+  position: absolute;
+  width: 105%;
+  margin-top: 0px;
+  overflow: auto;
+  box-shadow: -5px 6px 120px 0px rgba(0, 0, 0, 0.614);
+  border-radius: 4px;
+  
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  
+  
+}
+.dropdown-content a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.dropdown-content a:hover {
+  
+  color: #FFFFFF;
+  background-color: #00A4BD;
+  transition: all 0.2s ease-out;
+}
 /*Content---Start*/
 
 /*.border:nth-child(1){
@@ -601,6 +635,17 @@ img.Logo{
       font-weight: 500;
       text-align: center;
       margin-top: 20px;
+  }
+
+  .dropdown-content {
+    background-color:#FFFFFF;
+    display: none;
+    position: absolute;
+    width: 110%;
+    margin-top: 14px;
+    overflow: auto;
+    box-shadow: -5px 6px 10px 0px rgba(0, 0, 0, 0.614);
+    border-radius: 4px;
   }
 }
 
