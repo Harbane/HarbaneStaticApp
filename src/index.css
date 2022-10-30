@@ -52,7 +52,7 @@ li.Header, a{
     cursor: pointer;
 }
 header {
-    background-color: rgba(0, 0, 0, 0.454);
+    background-color: rgba(0, 0, 0, 0.15);
 }
 button{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -143,8 +143,8 @@ button:hover {
 
 
 .HomeIntro{
-    height: 90.9vh;
-    background-color: rgba(143, 143, 143, 0.066);
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 0);
     display: grid;
     align-items: center;
     justify-content: center;
@@ -154,7 +154,7 @@ button:hover {
 .MarginContainer{
     height: 10vh;
     margin-top: 40%;
-    margin-bottom: 40%;
+    margin-bottom: 55%;
     margin-left: 0vh;
     margin-right: 0vh; 
 } 
@@ -188,7 +188,6 @@ section.Slide2{
 
 
 div.Container{
-    padding-top: 1vh;
     color: white;
     background-color: rgba(215, 12, 12, 0);
     height: 450px;
@@ -462,7 +461,7 @@ img.Logo{
         text-decoration: none;
     }
     header {
-        background-color: rgba(0, 0, 0, 0.454);
+        background-color: rgba(0, 0, 0, 0.1);
     }
     button{
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
