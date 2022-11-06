@@ -91,6 +91,7 @@ h1{
 }
 
 img.usercon{
+    display: block;
     width: 1.8em;
     height: 1.8em;
     margin: 13px 8px;
@@ -155,7 +156,7 @@ img.usercon{
       }
 }
 
-@media screen and (max-width: 620px){
+@media screen and (max-width: 720px){
     body{
         margin: 0;   
         padding: 0;
