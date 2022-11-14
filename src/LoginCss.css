@@ -48,7 +48,7 @@ div.LoginBox{
 .ReturnButton{
     filter: invert(100%) sepia(0%) saturate(1555%) hue-rotate(161deg) brightness(100%) contrast(101%);
     color: #d0d0d0;
-    width: 50px;
+    width: 42px;
     margin-left: 0px;
     position: absolute;
     margin: 1.5% 0% 0% 1.5%;
