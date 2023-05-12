@@ -1,9 +1,9 @@
 /*-----------------------------*/
 
 .Hero{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.125)), url('Images/StaryForest.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.125)), url('Images/Harbane4Base.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   height: 500px;
   display: block;

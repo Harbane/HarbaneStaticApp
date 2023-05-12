@@ -204,8 +204,8 @@ div.Container{
 
 .Placeholder{
     background-color: rgba(0, 0, 0, 0.564);
-    height: 400px;
-    width: 409px;
+    height: 350px;
+    width: 370px;
     margin: 0px 0px;
     display: flex;
     align-items: center;
@@ -242,19 +242,19 @@ div.Container{
 }
 
 .Placeholder:nth-child(1){
-    background-image: linear-gradient(rgba(0, 0, 0, 0.125), rgba(0, 0, 0, 0.125)), url("Images/Bases.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("Images/Bases.jpg");
     border-radius: 2rem 0vh 0vh 2rem;
 }
 .Placeholder:nth-child(2){
-    background-image: url("Images/Harbane1Base.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),url("Images/Harbane1Base.jpg");
     border-radius: 0vh 0vh 0vh 0vh;
 }
 .Placeholder:nth-child(3){
-    background-image: url("Images/StaryForest.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),url("Images/StaryForest.jpg");
     border-radius: 0vh 0vh 0vh 0vh;
 }
 .Placeholder:nth-child(4){
-    background-image:  url("Images/CloudyNight.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),url("Images/CloudyNight.jpg");
     border-radius: 0vh 2rem 2rem 0vh;
 }
 
