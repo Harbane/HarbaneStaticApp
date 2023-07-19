@@ -1,6 +1,4 @@
-/* =============================================================================
-   HTML5 CSS Reset Minified - Eric Meyer
-   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:wght@400;500&display=swap');
 
 html,
 body,
@@ -150,9 +148,6 @@ li {
   list-style: none;
 }
 
-/* =============================================================================
-   My CSS
-   ========================================================================== */
 
 /* ---- base ---- */
 
@@ -160,7 +155,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background: #04152a;
+  background: #000000;
   overflow: hidden;
 }
 
@@ -197,13 +192,13 @@ canvas {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -100%);
-  padding: 10px;
+  padding: 0px;
   display: flex;
   justify-content: center;
 }
 
 .two{
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, -10%);
 }
 
 .bottom{
@@ -213,13 +208,16 @@ canvas {
 
 h1{
   color: #ffffff;
-  font-size: 6.5rem;
+  font-size: 7.6rem;
   background-color: rgba(0, 128, 0, 0);
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
   padding: 0px;
+  user-select: none;
 }
 
 h2{
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   color: #f6f6f6;
   cursor: default;
   user-select: none;
@@ -228,21 +226,21 @@ h2{
 
 span{
   color: rgba(255, 255, 255, 0.625);
-  font-size: 1rem;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.2rem;
+  font-family: 'Kanit', sans-serif;
   cursor: default;
   user-select: none;
 }
 
 /*eeeeeeee*/
 .three{
-  transform: translate(-50%, 100%)
+  transform: translate(-50%, 120%)
 }
 
 
 #testbutton {
-  width: 110px;
-  height: 40px;
+  width: 125px;
+  height: 50px;
   border-radius: 0.5rem;
   position:relative;
   background: linear-gradient(60deg, #ffc48976, #f36f5575, #ef4e7c81, #ae61bc6e, #5073b870, #1098ad6f, #07b39c6f, #6fba826f);
@@ -275,8 +273,8 @@ span{
 #testbutton:after {
   content:'Join Waitlist';
   text-align:center;
-  line-height: 35px;
-  font-size: 0.7rem;
+  line-height: 45px;
+  font-size: 0.9rem;
   color:rgba(235,235,235, 1);
   font-weight:bold;
   z-index:5;
@@ -284,8 +282,35 @@ span{
   display:block;
   border-radius: 0.4rem;
   width:94%;
-  height:83%;
+  height:84%;
   top:8%;
   left:3%;  
   background-color: #010409;
+}
+
+/* minimised class */
+
+
+/* Responsive Design */
+@media (max-width: 1150px) {
+  h1 {
+    font-size: 6rem;
+    text-align: center;
+  }
+
+  h2{
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 850px) {
+  h1 {
+    font-size: 6rem;
+    align-content: center;
+    text-align: center;
+  }
+
+  h2{
+    font-size: 2rem;
+  }
 }
