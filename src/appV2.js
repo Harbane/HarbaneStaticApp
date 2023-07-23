@@ -33,12 +33,12 @@ particlesJS('particles-js',
         "color": "#000000"
       },
       "polygon": {
-        "nb_sides": 7
+        "nb_sides": 3
       },
       "image": {
-        "src": "https://cdn.discordapp.com/attachments/872660349793472515/1131180432193503272/SeekPng.com_thin-white-line-png_3307905.png",
-        "width": 50,
-        "height": 500
+        "src": "Images/server-icon.png",
+        "width": 1000,
+        "height": 1000
       }
     },
     "opacity": {
@@ -52,7 +52,7 @@ particlesJS('particles-js',
       }
     },
     "size": {
-      "value": 2,
+      "value": 1.7,
       "random": true,
       "anim": {
         "enable": false,
