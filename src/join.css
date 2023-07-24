@@ -176,6 +176,25 @@ html, body{
   background-repeat: no-repeat;
 }
 
+.name {
+  text-transform: capitalize;
+  font-family: "Kanit", sans-serif;
+  color: rgba(203, 203, 203, 0.256);
+  position: absolute;
+  font-size: 2.5em;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  user-select: none;
+}
+
+.name:hover{
+  color: rgba(203, 203, 203, 0.351);
+  cursor: pointer;
+  transition: all 0.165s ease-in-out;
+}
+
 .container{
   width: 420px;
   height: 470px;
