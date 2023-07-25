@@ -162,6 +162,7 @@ html, body{
   background: #000000;
   overflow: hidden;
   font-family: normal 75% Arial, Helvetica, sans-serif;
+  
 }
 
 /* ---- particles.js container ---- */
@@ -181,7 +182,7 @@ html, body{
   font-family: "Kanit", sans-serif;
   color: rgba(203, 203, 203, 0.256);
   position: absolute;
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: 400;
   text-align: center;
   width: 100%;
@@ -196,11 +197,11 @@ html, body{
 }
 
 .container{
-  width: 420px;
-  height: 470px;
+  width: 390px;
+  height: 450px;
   border-radius: 1.75rem;
   border: 2px solid #1C293C;
-  background: rgba(0, 0, 0, 0.453);
+  background-color: rgba(0, 0, 0, 0.453);
   position:absolute;
   left: 0;
   right: 0;
@@ -215,7 +216,7 @@ html, body{
 form{
   display: block;
   width: 90%;
-  transform: translateY(8%);
+  transform: translateY(5.4%);
 }
 
 input.text{
@@ -231,7 +232,7 @@ input.text{
   outline: none;
   text-align: left;
   font-family: Arial;
-  font-size: 16px;
+  font-size: 15px;
   margin: 8px 0px;
 }
 
@@ -242,7 +243,7 @@ button.button{
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 4px;
-  font-size: 22px;
+  font-size: 20px;
   margin-top: 10px;
   cursor: pointer;
 }
@@ -260,4 +261,17 @@ h1.heading{
   font-size: 2.5em;
   text-transform: capitalize;
   text-align: center;
+}
+
+
+/* Responsive Design */
+@media (max-width: 450px) {
+  .container{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.202);
+    border: none;
+  }
+
+
+
 }
