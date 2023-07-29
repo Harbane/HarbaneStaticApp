@@ -213,7 +213,7 @@ html, body{
   align-items: center;
 }
 
-form{
+.form{
   display: block;
   width: 90%;
   transform: translateY(5.4%);

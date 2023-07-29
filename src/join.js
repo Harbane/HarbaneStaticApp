@@ -10,6 +10,14 @@ function submit30() {
   console.log(`Last Name: ${lname}`);
   console.log(`Email: ${email}`);
 
+  $.ajax({  
+    url: "https://dashboard.harbane.net/users", 
+    headers: {'fname': fname, 'lname': lname, 'email': email},
+    type: "GET",
+    success: function (data) {
+      console.log(data);
+    }
+  });
 }
 
 
