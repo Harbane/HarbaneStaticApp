@@ -225,6 +225,7 @@ input.text{
   height: 52px;
   flex-direction: column;
   justify-content: center;
+  color:rgb(199, 199, 199);
   background-color: #29292985;
   padding-left: 3%;
   border: 0px;
@@ -234,6 +235,10 @@ input.text{
   font-family: Arial;
   font-size: 15px;
   margin: 8px 0px;
+}
+
+input:focus{
+  color: aliceblue;
 }
 
 button.button{
