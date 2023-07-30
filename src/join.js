@@ -36,7 +36,7 @@ function submit30() {
 
   // sending user registration request
   $.ajax({  
-    url: "http://dashboard.harbane.net/users/add", 
+    url: "https://dashboard.harbane.net/users/add", 
     headers: {'fname': fname, 'lname': lname, 'email': email},
     type: "POST",
     success: function (data) {
