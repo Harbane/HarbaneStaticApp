@@ -244,19 +244,59 @@ input:focus{
 button.button{
   height: 4.6rem;
   width: 100%;
+  margin-top: 10px;
   background-color: rgb(23, 5, 83);
-  color: rgb(255, 255, 255);
+  cursor: pointer;
   border: none;
   border-radius: 4px;
+  position: relative;
+}
+
+.button:active{
+  background-color: rgb(23, 5, 83);
+}
+
+.button__text{
+  color: rgb(255, 255, 255);
   font-size: 20px;
-  margin-top: 10px;
-  cursor: pointer;
 }
 
 button.button:hover{
   background-color: rgba(16, 3, 75, 0.982);
   transition: all 0.2s ease;
 }
+
+.button--loading .button__text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.button--loading::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border:  2px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: button-loading-spinner 0.8s linear infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 
 h1.heading{
   color: white;

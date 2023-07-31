@@ -1,10 +1,18 @@
+function animate() {
+  const btn = document.querySelector("button");
+  btn.classList.add("button--loading");
+}
 
 
 function submit30() {
+
   // getting user info
   let fname = document.getElementById('fname').value;
   let lname = document.getElementById('lname').value;
   let email = document.getElementById('email').value;
+
+  let time = new Date().getTime();
+  console.log(time.toString());
 
   // checking if user info is allowed
   if(fname === '' || lname === '' || email === ''){
@@ -34,11 +42,15 @@ function submit30() {
   console.log(`Email: ${email}`);
   console.log('sending user registration..');
 
+  // displaying loading indicator
+  animate();
+
   // sending user registration request
   $.ajax({  
     url: "https://dashboard.harbane.net/users/add", 
-    headers: {'fname': fname, 'lname': lname, 'email': email},
+    headers: {'fname': fname, 'lname': lname, 'email': email, 'tm': time},
     type: "POST",
+    async: "false",
     success: function (data) {
       console.log(`Request successful on`)
       console.debug(data);
