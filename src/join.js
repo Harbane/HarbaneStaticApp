@@ -57,7 +57,7 @@ function submit30() {
   console.log(`Last Name: ${lname}`);
   console.log(`Email: ${email}`);
   console.log('sending user registration..');
-
+  
   // displaying loading indicator
   animate();
 
@@ -70,10 +70,10 @@ function submit30() {
     success: function (data) {
       console.log(`Request successful on`)
       console.debug(data);
+      alert('You Have Entered The Waitlist')
+      animate(false);
     }
   });
-
-
 }
 
 
