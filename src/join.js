@@ -1,5 +1,9 @@
-function animate() {
+function animate(toggle) {
   const btn = document.querySelector("button");
+  if (toggle == false) {
+    btn.classList.remove("button--loading");
+    return
+  }
   btn.classList.add("button--loading");
 }
 
@@ -11,8 +15,10 @@ function submit30() {
   let lname = document.getElementById('lname').value;
   let email = document.getElementById('email').value;
 
-  let time = new Date().getTime();
+  const time = new Date().getTime();
   console.log(time.toString());
+
+
 
   // checking if user info is allowed
   if(fname === '' || lname === '' || email === ''){
@@ -25,10 +31,20 @@ function submit30() {
     console.log('fname contains spaces');
     return
   }
+  if (!/^[a-zA-Z]*$/g.test(document.getElementById('fname').value)) {
+    alert("Invalid characters in First Name");
+    document.getElementById('fname').focus();
+    return;
+  }
   if(lname.includes(' ')){
     alert('last name contains spaces');
     console.log('lname contains spaces');
     return
+  }
+  if (!/^[a-zA-Z]*$/g.test(document.getElementById('lname').value)) {
+    alert("Invalid characters in Last Name");
+    document.getElementById('lname').focus();
+    return;
   }
   if(!email.includes('@') || !email.includes('.') || email.includes(' ')){
     alert('email does not contain @ or . or has spaces');
@@ -56,6 +72,8 @@ function submit30() {
       console.debug(data);
     }
   });
+
+
 }
 
 
