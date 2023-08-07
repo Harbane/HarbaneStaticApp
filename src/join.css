@@ -213,6 +213,18 @@ html, body{
   align-items: center;
 }
 
+
+h1.heading{
+  color: white;
+  margin-bottom: 55px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+  font-size: 2.5em;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+
 .form{
   display: block;
   width: 90%;
@@ -287,6 +299,55 @@ button.button:hover{
   animation: button-loading-spinner 0.8s linear infinite;
 }
 
+#error{
+  opacity: 0;
+  height: 100px;
+  width: 375px;
+  border-radius: 10px;
+  display: flex;
+  background-color: rgba(33, 33, 33, 0.609);
+  position: absolute;
+  transform: translateY(300%);
+}
+
+.error-image{
+  width: 90px;
+  height: 100%;
+  background-color: rgb(145, 0, 0);
+  border-radius: 8px 0px 0px 8px;
+}
+
+.x{
+  width: 50px;
+  display: block;
+  margin: auto;
+  filter: invert();
+  transform: translateY(50%);
+}
+
+.error-text{
+  background-color: rgba(0, 255, 255, 0);
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error{
+  transform: translateY(125%);
+  color: white;
+  font-family: Arial;
+  text-align: center;
+}
+
+.title{
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.message{
+  margin-top: 15px;
+  font-size: 15px;
+}
+
 @keyframes button-loading-spinner {
   from {
     transform: rotate(0turn);
@@ -297,16 +358,6 @@ button.button:hover{
   }
 }
 
-
-h1.heading{
-  color: white;
-  margin-bottom: 55px;
-  font-family: 'Kanit', sans-serif;
-  font-weight: 300;
-  font-size: 2.5em;
-  text-transform: capitalize;
-  text-align: center;
-}
 
 
 
