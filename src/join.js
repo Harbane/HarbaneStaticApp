@@ -18,36 +18,76 @@ function submit30() {
   const time = new Date().getTime();
   console.log(time.toString());
 
-
+  const errorBox = document.getElementById('error');
+  const errorTitle = document.getElementById('title');
+  const errorMessage = document.getElementById('message');
+  const errorColor = document.getElementById('errorColor');
+  const imageSrc = document.getElementById('imageSrc');
 
   // checking if user info is allowed
   if(fname === '' || lname === '' || email === ''){
-    alert('Please enter all required fields');
-    console.log('please enter all required fields')
+    errorTitle.innerHTML = 'INCOMPLETE';
+    errorMessage.innerHTML = 'Ensure that all fields are filled out';
+    imageSrc.style.width = '32px';
+    imageSrc.src="Images/x-symbol.svg";
+    errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
+    errorBox.style.opacity = 1;
+    
+    console.log('please enter all required fields');
     return 
   }
+
   if(fname.includes(' ')){
-    alert('first name contains spaces');
-    console.log('fname contains spaces');
-    return
+    errorTitle.innerHTML = 'INVALID NAME';
+    errorMessage.innerHTML = 'First name cannot contains spaces';
+    imageSrc.style.width = '32px';
+    imageSrc.src="Images/x-symbol.svg";
+    errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
+    errorBox.style.opacity = 1;
+    fname.focus();
+    return;
   }
-  if (!/^[a-zA-Z]*$/g.test(document.getElementById('fname').value)) {
-    alert("Invalid characters in First Name");
+  
+  if(lname.includes(' ')){
+    errorTitle.innerHTML = 'INVALID NAME';
+    errorMessage.innerHTML = 'Last name cannot contains spaces';
+    imageSrc.style.width = '32px';
+    imageSrc.src="Images/x-symbol.svg";
+    errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
+    errorBox.style.opacity = 1;
+    lname.focus();
+    return;
+  }
+
+  if(!/^[a-zA-Z]*$/g.test(document.getElementById('fname').value)) {
+    errorTitle.innerHTML = 'INVALID NAME';
+    errorMessage.innerHTML = 'First name contains invalid characters';
+    imageSrc.style.width = '32px';
+    imageSrc.src="Images/x-symbol.svg";
+    errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
+    errorBox.style.opacity = 1;
     document.getElementById('fname').focus();
     return;
   }
-  if(lname.includes(' ')){
-    alert('last name contains spaces');
-    console.log('lname contains spaces');
-    return
-  }
-  if (!/^[a-zA-Z]*$/g.test(document.getElementById('lname').value)) {
-    alert("Invalid characters in Last Name");
+
+  if(!/^[a-zA-Z]*$/g.test(document.getElementById('lname').value)) {
+    errorTitle.innerHTML = 'INVALID NAME';
+    errorMessage.innerHTML = 'Last name contains invalid characters';
+    imageSrc.style.width = '32px';
+    imageSrc.src="Images/x-symbol.svg";
+    errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
+    errorBox.style.opacity = 1;
     document.getElementById('lname').focus();
     return;
   }
+
   if(!email.includes('@') || !email.includes('.') || email.includes(' ')){
-    alert('email does not contain @ or . or has spaces');
+    errorTitle.innerHTML = 'INVALID EMAIL';
+    errorMessage.innerHTML = "Email has spaces or doesn't contain @ .";
+    imageSrc.style.width = '32px';
+    imageSrc.src="Images/x-symbol.svg";
+    errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
+    errorBox.style.opacity = 1;
     console.log('email does not contain @ or . or has spaces')
     return
   }
@@ -70,7 +110,12 @@ function submit30() {
     success: function (data) {
       console.log(`Request successful on`)
       console.debug(data);
-      alert('You Have Entered The Waitlist')
+      errorTitle.innerHTML = 'Success';
+      imageSrc.style.width = '40px';
+      imageSrc.src="Images/tick-svgrepo-com (1).svg";
+      errorColor.style.backgroundColor = 'rgb(56, 167, 0)'
+      errorMessage.innerHTML = "You have joined the waitlist";
+      errorBox.style.opacity = 1;
       animate(false);
     }
   });
