@@ -251,6 +251,7 @@ input.text{
 
 input:focus{
   color: aliceblue;
+  background-color: #232323d3;
 }
 
 button.button{
@@ -322,7 +323,7 @@ button.button:hover{
   width: 32px;
   display: block;
   margin: auto;
-  filter: invert();
+  filter: invert();  
 }
 
 .error-text{

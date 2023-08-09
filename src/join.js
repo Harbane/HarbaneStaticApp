@@ -17,12 +17,16 @@ function submit30() {
   const time = new Date().getTime();
   console.log(time.toString());
 
-  // getting error box 
+  // getting elements for interactivity 
   const errorBox = document.getElementById('error');
   const errorTitle = document.getElementById('title');
   const errorMessage = document.getElementById('message');
   const errorColor = document.getElementById('errorColor');
   const imageSrc = document.getElementById('imageSrc');
+
+  const fnameElement = document.getElementById('fname')
+  const lnameElement = document.getElementById('lname')
+  const emailElement = document.getElementById('email')
 
   // checking if user info is allowed
   if(fname === '' || lname === '' || email === ''){
@@ -32,7 +36,11 @@ function submit30() {
     imageSrc.src="Images/x-symbol.svg";
     errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
     errorBox.style.opacity = 1;
-    
+
+    fnameElement.style.outline = '1px solid rgba(200, 0, 0, 0.509)';
+    lnameElement.style.outline = '1px solid rgba(200, 0, 0, 0.509)';
+    emailElement.style.outline = '1px solid rgba(200, 0, 0, 0.509)';
+
     console.log('please enter all required fields');
     return 
   }
@@ -43,6 +51,11 @@ function submit30() {
     imageSrc.src="Images/x-symbol.svg";
     errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
     errorBox.style.opacity = 1;
+
+    fnameElement.style.outline = '1px solid rgba(200, 0, 0, 0.509)';
+    lnameElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
+    emailElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
+
     fname.focus();
     return;
   }
@@ -53,6 +66,11 @@ function submit30() {
     imageSrc.src="Images/x-symbol.svg";
     errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
     errorBox.style.opacity = 1;
+
+    fnameElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
+    lnameElement.style.outline = '1px solid rgba(200, 0, 0, 0.509)';
+    emailElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
+
     lname.focus();
     return;
   }
@@ -63,6 +81,11 @@ function submit30() {
     imageSrc.src="Images/x-symbol.svg";
     errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
     errorBox.style.opacity = 1;
+
+    fnameElement.style.outline = '1px solid rgba(200, 0, 0, 0.509)';
+    lnameElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
+    emailElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
+
     document.getElementById('fname').focus();
     return;
   }
@@ -73,6 +96,10 @@ function submit30() {
     imageSrc.src="Images/x-symbol.svg";
     errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
     errorBox.style.opacity = 1;
+
+    fnameElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
+    lnameElement.style.outline = '1px solid rgba(200, 0, 0, 0.509)';
+    emailElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
     document.getElementById('lname').focus();
     return;
   }
@@ -83,6 +110,9 @@ function submit30() {
     imageSrc.src="Images/x-symbol.svg";
     errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
     errorBox.style.opacity = 1;
+    fnameElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
+    lnameElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
+    emailElement.style.outline = '1px solid rgba(200, 0, 0, 0.509)';
     console.log('email does not contain @ or . or has spaces')
     return
   }
@@ -107,6 +137,11 @@ function submit30() {
       console.log(xhr.status)
       console.debug(data);
       // displaying success message
+      if(xhr.status == 200){
+        console.log('You have been added to the Databse')
+        console.log('Check your inbox for verification email')
+      }
+
       imageSrc.src="Images/tick-svgrepo-com (1).svg";
       errorColor.style.backgroundColor = 'rgb(56, 167, 0)'
       errorTitle.innerHTML = 'Success';
@@ -121,8 +156,18 @@ function submit30() {
         imageSrc.src="Images/x-symbol.svg";
         errorColor.style.backgroundColor = 'rgb(141, 0, 0)';
         errorTitle.innerHTML = 'Error';
-        imageSrc.style.width = '40px';
+        imageSrc.style.width = '32px';
         errorMessage.innerHTML = "Email already exists in the databse";
+        errorBox.style.opacity = 1;
+        animate(false);
+      }
+
+      if(data.status == 500){
+        imageSrc.src="Images/x-symbol.svg";
+        errorColor.style.backgroundColor = '#be4c00';
+        errorTitle.innerHTML = 'Server Error';
+        imageSrc.style.width = '32px';
+        errorMessage.innerHTML = "Internal Server error has occured";
         errorBox.style.opacity = 1;
         animate(false);
       }
