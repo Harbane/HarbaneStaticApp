@@ -14,10 +14,10 @@ function submit30() {
   let fname = document.getElementById('fname').value;
   let lname = document.getElementById('lname').value;
   let email = document.getElementById('email').value;
-
   const time = new Date().getTime();
   console.log(time.toString());
 
+  // getting error box 
   const errorBox = document.getElementById('error');
   const errorTitle = document.getElementById('title');
   const errorMessage = document.getElementById('message');
@@ -36,7 +36,6 @@ function submit30() {
     console.log('please enter all required fields');
     return 
   }
-
   if(fname.includes(' ')){
     errorTitle.innerHTML = 'INVALID NAME';
     errorMessage.innerHTML = 'First name cannot contains spaces';
@@ -47,7 +46,6 @@ function submit30() {
     fname.focus();
     return;
   }
-  
   if(lname.includes(' ')){
     errorTitle.innerHTML = 'INVALID NAME';
     errorMessage.innerHTML = 'Last name cannot contains spaces';
@@ -58,7 +56,6 @@ function submit30() {
     lname.focus();
     return;
   }
-
   if(!/^[a-zA-Z]*$/g.test(document.getElementById('fname').value)) {
     errorTitle.innerHTML = 'INVALID NAME';
     errorMessage.innerHTML = 'First name contains invalid characters';
@@ -69,7 +66,6 @@ function submit30() {
     document.getElementById('fname').focus();
     return;
   }
-
   if(!/^[a-zA-Z]*$/g.test(document.getElementById('lname').value)) {
     errorTitle.innerHTML = 'INVALID NAME';
     errorMessage.innerHTML = 'Last name contains invalid characters';
@@ -80,7 +76,6 @@ function submit30() {
     document.getElementById('lname').focus();
     return;
   }
-
   if(!email.includes('@') || !email.includes('.') || email.includes(' ')){
     errorTitle.innerHTML = 'INVALID EMAIL';
     errorMessage.innerHTML = "Email has spaces or doesn't contain @ .";
@@ -107,16 +102,30 @@ function submit30() {
     headers: {'fname': fname, 'lname': lname, 'email': email, 'tm': time},
     type: "POST",
     async: "false",
-    success: function (data) {
+    success: function (data, textStatus, xhr) {
       console.log(`Request successful on`)
+      console.log(xhr.status)
       console.debug(data);
-      errorTitle.innerHTML = 'Success';
-      imageSrc.style.width = '40px';
+      // displaying success message
       imageSrc.src="Images/tick-svgrepo-com (1).svg";
       errorColor.style.backgroundColor = 'rgb(56, 167, 0)'
+      errorTitle.innerHTML = 'Success';
+      imageSrc.style.width = '40px';
       errorMessage.innerHTML = "You have joined the waitlist";
       errorBox.style.opacity = 1;
       animate(false);
+    },
+    complete: function (data, textStatus, xhr){
+      console.log(data.status);
+      if(data.status == 409){
+        imageSrc.src="Images/x-symbol.svg";
+        errorColor.style.backgroundColor = 'rgb(141, 0, 0)';
+        errorTitle.innerHTML = 'Error';
+        imageSrc.style.width = '40px';
+        errorMessage.innerHTML = "Email already exists in the databse";
+        errorBox.style.opacity = 1;
+        animate(false);
+      }
     }
   });
 }
