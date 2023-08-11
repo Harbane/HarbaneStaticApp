@@ -12,18 +12,24 @@
     <title>Join - Harbane Network</title>
   </head>
   <body>
-    <a class="name" href="/">Harbane Network</a>
+    <a class="name center" href="/">Harbane Network</a>
     <section class="container">
-      <div class="ui form">
-        <h1 class="heading">Join The Network</h1>
+      <div class="ui form fill" id="form">
+        <h1 class="heading center">Join The Network</h1>
         <input type="text" class="text input" name="fname" id="fname" placeholder="First Name" autocomplete="on" maxlength='10' required>
         <input type="text" class="text input" name="lname" id="lname" placeholder="Last Name" autocomplete="on" maxlength='10'required>
         <input type="email" class="text input" name="email" id="email" placeholder="Email" autocomplete="on" required>
         <button class="button" onclick="submit30()"><span class="button__text">SUBMIT</span></button>
       </div>
-
+      <div id="success" class="fill center">
+        <h1 class="success">Verify your email</h1>
+        <p class="message-success ">Email has been sent to your inbox</p>
+        <p class="message-success ">Email will be removed if not verified</p>
+        <p class="email" id="emailText">example@harbane.net</p>
+        <button class="resend">Resend Email</button>
+      </div>
       <div id="error">
-        <div class="error-image" id="errorColor">
+        <div class="error-image center" id="errorColor">
           <img src="" alt="X Icon" class="x" id="imageSrc">
         </div>
         <div class="error-text">

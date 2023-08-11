@@ -28,8 +28,19 @@ function submit30() {
   const lnameElement = document.getElementById('lname')
   const emailElement = document.getElementById('email')
 
+  // verify email box contents
+  const verifyBox = document.getElementById('success')
+  const verifyEmail = document.getElementById('emailText')
+
+  const form = document.getElementById('form')
+
+
+  fnameElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
+  lnameElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
+  emailElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
+
   // checking if user info is allowed
-  if(fname === '' || lname === '' || email === ''){
+  if(fname === ''){
     errorTitle.innerHTML = 'INCOMPLETE';
     errorMessage.innerHTML = 'Ensure that all fields are filled out';
     imageSrc.style.width = '32px';
@@ -40,10 +51,43 @@ function submit30() {
     fnameElement.style.outline = '1px solid rgba(200, 0, 0, 0.509)';
     lnameElement.style.outline = '1px solid rgba(200, 0, 0, 0.509)';
     emailElement.style.outline = '1px solid rgba(200, 0, 0, 0.509)';
-
     console.log('please enter all required fields');
+    fnameElement.focus();
     return 
   }
+
+  if(lname === ''){
+    errorTitle.innerHTML = 'INCOMPLETE';
+    errorMessage.innerHTML = 'Ensure that all fields are filled out';
+    imageSrc.style.width = '32px';
+    imageSrc.src="Images/x-symbol.svg";
+    errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
+    errorBox.style.opacity = 1;
+
+    fnameElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
+    lnameElement.style.outline = '1px solid rgba(200, 0, 0, 0.509)';
+    emailElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
+    console.log('please enter all required fields');
+    lnameElement.focus();
+    return 
+  }
+
+  if(email === ''){
+    errorTitle.innerHTML = 'INCOMPLETE';
+    errorMessage.innerHTML = 'Ensure that all fields are filled out';
+    imageSrc.style.width = '32px';
+    imageSrc.src="Images/x-symbol.svg";
+    errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
+    errorBox.style.opacity = 1;
+
+    fnameElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
+    lnameElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
+    emailElement.style.outline = '1px solid rgba(200, 0, 0, 0.509)';
+    console.log('please enter all required fields');
+    emailElement.focus();
+    return 
+  }
+
   if(fname.includes(' ')){
     errorTitle.innerHTML = 'INVALID NAME';
     errorMessage.innerHTML = 'First name cannot contains spaces';
@@ -55,10 +99,10 @@ function submit30() {
     fnameElement.style.outline = '1px solid rgba(200, 0, 0, 0.509)';
     lnameElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
     emailElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
-
-    fname.focus();
+    fnameElement.focus();
     return;
   }
+
   if(lname.includes(' ')){
     errorTitle.innerHTML = 'INVALID NAME';
     errorMessage.innerHTML = 'Last name cannot contains spaces';
@@ -70,10 +114,10 @@ function submit30() {
     fnameElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
     lnameElement.style.outline = '1px solid rgba(200, 0, 0, 0.509)';
     emailElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
-
-    lname.focus();
+    lnameElement.focus();
     return;
   }
+
   if(!/^[a-zA-Z]*$/g.test(document.getElementById('fname').value)) {
     errorTitle.innerHTML = 'INVALID NAME';
     errorMessage.innerHTML = 'First name contains invalid characters';
@@ -85,10 +129,10 @@ function submit30() {
     fnameElement.style.outline = '1px solid rgba(200, 0, 0, 0.509)';
     lnameElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
     emailElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
-
-    document.getElementById('fname').focus();
+    fnameElement.focus();
     return;
   }
+
   if(!/^[a-zA-Z]*$/g.test(document.getElementById('lname').value)) {
     errorTitle.innerHTML = 'INVALID NAME';
     errorMessage.innerHTML = 'Last name contains invalid characters';
@@ -100,9 +144,10 @@ function submit30() {
     fnameElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
     lnameElement.style.outline = '1px solid rgba(200, 0, 0, 0.509)';
     emailElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
-    document.getElementById('lname').focus();
+    lnameElement.focus();
     return;
   }
+
   if(!email.includes('@') || !email.includes('.') || email.includes(' ')){
     errorTitle.innerHTML = 'INVALID EMAIL';
     errorMessage.innerHTML = "Email has spaces or doesn't contain @ .";
@@ -113,7 +158,8 @@ function submit30() {
     fnameElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
     lnameElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
     emailElement.style.outline = '1px solid rgba(200, 0, 0, 0.509)';
-    console.log('email does not contain @ or . or has spaces')
+    console.log('email does not contain @ or . or has spaces');
+    emailElement.focus();
     return
   }
 
@@ -125,6 +171,8 @@ function submit30() {
   
   // displaying loading indicator
   animate();
+
+
 
   // sending user registration request
   $.ajax({  
@@ -146,15 +194,21 @@ function submit30() {
       errorColor.style.backgroundColor = 'rgb(56, 167, 0)'
       errorTitle.innerHTML = 'Success';
       imageSrc.style.width = '40px';
-      errorMessage.innerHTML = "You have joined the waitlist";
+      errorMessage.innerHTML = "You have been added to the waitlist";
       errorBox.style.opacity = 1;
+
+      form.style.opacity = 0;
+      verifyEmail.innerHTML = email;
+      verifyBox.style.zIndex = '10';
+      verifyBox.style.opacity = 1;
+
       animate(false);
     },
     complete: function (data, textStatus, xhr){
       console.log(data.status);
       if(data.status == 409){
         imageSrc.src="Images/x-symbol.svg";
-        errorColor.style.backgroundColor = 'rgb(141, 0, 0)';
+        errorColor.style.backgroundColor = 'rgb(188, 60, 0)';
         errorTitle.innerHTML = 'Error';
         imageSrc.style.width = '32px';
         errorMessage.innerHTML = "Email already exists in the databse";
