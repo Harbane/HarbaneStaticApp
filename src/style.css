@@ -204,8 +204,9 @@ canvas {
   width: 100%;
 }
 
+
 h1{
-  color: #ffffff;
+  color: #fbe2cf;
   font-size: 7.6rem;
   background-color: rgba(0, 128, 0, 0);
   font-family: 'Kanit', sans-serif;
@@ -216,14 +217,14 @@ h1{
 
 h2{
   font-size: 2.5rem;
-  color: #f6f6f6;
+  color: rgba(223, 220, 220, 0.929);
   cursor: default;
   user-select: none;
   font-family:Arial, Helvetica, sans-serif
 }
 
 span{
-  color: rgba(255, 255, 255, 0.625);
+  color: rgba(204, 204, 204, 0.708);
   font-size: 1.2rem;
   font-family: 'Kanit', sans-serif;
   cursor: default;
