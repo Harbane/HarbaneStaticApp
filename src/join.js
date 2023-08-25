@@ -229,4 +229,39 @@ function submit30() {
   });
 }
 
+function resend() {
+  // getting user info
+  let fname = document.getElementById('fname').value;
+  let lname = document.getElementById('lname').value;
+  let email = document.getElementById('email').value;
+
+  const VerifyTitle = document.getElementById('VerifyTitle');
+  const ResendButton = document.getElementById('ResendButton');
+  const VerifyMessage = document.getElementById('VerifyMessage');
+
+  const time = new Date().getTime();
+  console.log(time.toString());
+
+  // sending user registration request
+  $.ajax({  
+    url: "http://localhost:3000/users/resend", 
+    headers: {'fname': fname, 'lname': lname, 'email': email, 'tm': time},
+    type: "POST",
+    async: "false",
+    success: function (data, textStatus, xhr) {
+      console.log(`Request successful on`)
+      console.log(xhr.status)
+      console.debug(data);
+      // displaying success message
+      if(xhr.status == 200){
+        VerifyTitle.innerHTML = "Email Resent"
+        VerifyMessage.innerHTML = "Email has been resent to your inbox"
+        ResendButton.style.display = "none"
+
+        console.log('You have been added to the Databse')
+        console.log('Check your inbox for verification email')
+      }
+    },
+  });
+}
 

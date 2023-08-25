@@ -22,11 +22,11 @@
         <button class="button" onclick="submit30()"><span class="button__text">SUBMIT</span></button>
       </div>
       <div id="success" class="fill center">
-        <h1 class="success">Verify your email</h1>
-        <p class="message-success ">Email has been sent to your inbox</p>
+        <h1 class="success" id="VerifyTitle">Verify your email</h1>
+        <p class="message-success " id="VerifyMessage">Email has been sent to your inbox</p>
         <p class="message-success ">Email will be removed if not verified</p>
         <p class="email" id="emailText">example@harbane.net</p>
-        <button class="resend">Resend Email</button>
+        <button class="resend" onclick="resend()" id="ResendButton">Resend Email</button>
       </div>
       <div id="error">
         <div class="error-image center" id="errorColor">
