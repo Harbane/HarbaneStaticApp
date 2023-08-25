@@ -244,7 +244,7 @@ function resend() {
 
   // sending user registration request
   $.ajax({  
-    url: "http://localhost:3000/users/resend", 
+    url: "https://dashboard.harbane.net/users/resend", 
     headers: {'fname': fname, 'lname': lname, 'email': email, 'tm': time},
     type: "POST",
     async: "false",
