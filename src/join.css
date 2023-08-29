@@ -196,7 +196,7 @@ html, body{
 }
 
 .container{
-  width: 390px;
+  width: 365px;
   height: 450px;
   border-radius: 20px;
   border: 2px solid #1C293C;
@@ -218,7 +218,7 @@ h1.heading{
   margin-bottom: 55px;
   font-family: 'Kanit', sans-serif;
   font-weight: 400;
-  font-size: 2.5em;
+  font-size: 2.4em;
   text-transform: capitalize;
 }
 
@@ -403,7 +403,16 @@ button.button:hover{
   }
 }
 
+/* mini class */
+.fill{
+  display: block;
+  width: 90%;
+  transform: translateY(5.5%);
+}
 
+.center{
+  text-align: center;
+}
 
 
 
@@ -416,13 +425,3 @@ button.button:hover{
   }
 }
 
-/* mini class */
-.fill{
-  display: block;
-  width: 90%;
-  transform: translateY(5.5%);
-}
-
-.center{
-  text-align: center;
-}
