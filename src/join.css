@@ -406,8 +406,8 @@ button.button:hover{
 /* mini class */
 .fill{
   display: block;
-  width: 90%;
-  transform: translateY(5.5%);
+  width: 91%;
+  transform: translateY(5.9%);
 }
 
 .center{
