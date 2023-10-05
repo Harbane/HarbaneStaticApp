@@ -44,7 +44,7 @@ function submit30() {
     errorTitle.innerHTML = 'INCOMPLETE';
     errorMessage.innerHTML = 'Ensure that all fields are filled out';
     imageSrc.style.width = '32px';
-    imageSrc.src="Images/x-symbol.svg";
+    imageSrc.src="https://cdn.harbane.net/images/HarbaneWebApp-Images/x-symbol.svg";
     errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
     errorBox.style.opacity = 1;
 
@@ -60,7 +60,7 @@ function submit30() {
     errorTitle.innerHTML = 'INCOMPLETE';
     errorMessage.innerHTML = 'Ensure that all fields are filled out';
     imageSrc.style.width = '32px';
-    imageSrc.src="Images/x-symbol.svg";
+    imageSrc.src="https://cdn.harbane.net/images/HarbaneWebApp-Images/x-symbol.svg";
     errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
     errorBox.style.opacity = 1;
 
@@ -76,7 +76,7 @@ function submit30() {
     errorTitle.innerHTML = 'INCOMPLETE';
     errorMessage.innerHTML = 'Ensure that all fields are filled out';
     imageSrc.style.width = '32px';
-    imageSrc.src="Images/x-symbol.svg";
+    imageSrc.src="https://cdn.harbane.net/images/HarbaneWebApp-Images/x-symbol.svg";
     errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
     errorBox.style.opacity = 1;
 
@@ -92,7 +92,7 @@ function submit30() {
     errorTitle.innerHTML = 'INVALID NAME';
     errorMessage.innerHTML = 'First name cannot contains spaces';
     imageSrc.style.width = '32px';
-    imageSrc.src="Images/x-symbol.svg";
+    imageSrc.src="https://cdn.harbane.net/images/HarbaneWebApp-Images/x-symbol.svg";
     errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
     errorBox.style.opacity = 1;
 
@@ -107,7 +107,7 @@ function submit30() {
     errorTitle.innerHTML = 'INVALID NAME';
     errorMessage.innerHTML = 'Last name cannot contains spaces';
     imageSrc.style.width = '32px';
-    imageSrc.src="Images/x-symbol.svg";
+    imageSrc.src="https://cdn.harbane.net/images/HarbaneWebApp-Images/x-symbol.svg";
     errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
     errorBox.style.opacity = 1;
 
@@ -122,7 +122,7 @@ function submit30() {
     errorTitle.innerHTML = 'INVALID NAME';
     errorMessage.innerHTML = 'First name contains invalid characters';
     imageSrc.style.width = '32px';
-    imageSrc.src="Images/x-symbol.svg";
+    imageSrc.src="https://cdn.harbane.net/images/HarbaneWebApp-Images/x-symbol.svg";
     errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
     errorBox.style.opacity = 1;
 
@@ -137,7 +137,7 @@ function submit30() {
     errorTitle.innerHTML = 'INVALID NAME';
     errorMessage.innerHTML = 'Last name contains invalid characters';
     imageSrc.style.width = '32px';
-    imageSrc.src="Images/x-symbol.svg";
+    imageSrc.src="https://cdn.harbane.net/images/HarbaneWebApp-Images/x-symbol.svg";
     errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
     errorBox.style.opacity = 1;
 
@@ -152,7 +152,7 @@ function submit30() {
     errorTitle.innerHTML = 'INVALID EMAIL';
     errorMessage.innerHTML = "Email has spaces or doesn't contain @ .";
     imageSrc.style.width = '32px';
-    imageSrc.src="Images/x-symbol.svg";
+    imageSrc.src="https://cdn.harbane.net/images/HarbaneWebApp-Images/x-symbol.svg";
     errorColor.style.backgroundColor = 'rgb(141, 0, 0)'
     errorBox.style.opacity = 1;
     fnameElement.style.outline = '0px solid rgba(200, 0, 0, 0.509)';
@@ -190,7 +190,7 @@ function submit30() {
         console.log('Check your inbox for verification email')
       }
 
-      imageSrc.src="Images/tick-svgrepo-com (1).svg";
+      imageSrc.src="https://cdn.harbane.net/images/HarbaneWebApp-Images/tick-svgrepo-com%20(1).svg";
       errorColor.style.backgroundColor = 'rgb(56, 167, 0)'
       errorTitle.innerHTML = 'Success';
       imageSrc.style.width = '40px';
@@ -207,7 +207,7 @@ function submit30() {
     complete: function (data, textStatus, xhr){
       console.log(data.status);
       if(data.status == 409){
-        imageSrc.src="Images/x-symbol.svg";
+        imageSrc.src="https://cdn.harbane.net/images/HarbaneWebApp-Images/x-symbol.svg";
         errorColor.style.backgroundColor = 'rgb(188, 60, 0)';
         errorTitle.innerHTML = 'Error';
         imageSrc.style.width = '32px';
@@ -217,7 +217,7 @@ function submit30() {
       }
 
       if(data.status == 500){
-        imageSrc.src="Images/x-symbol.svg";
+        imageSrc.src="https://cdn.harbane.net/images/HarbaneWebApp-Images/x-symbol.svg";
         errorColor.style.backgroundColor = '#be4c00';
         errorTitle.innerHTML = 'Server Error';
         imageSrc.style.width = '32px';
